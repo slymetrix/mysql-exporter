@@ -30,6 +30,10 @@ OptionParser.new do |opts|
         @options[:port] = n.to_i
     end
 
+    opts.on('-sPATH', '--socket=PATH', 'Path to unix socket') do |n|
+        @options[:socket] = n
+    end
+
     opts.on('-h', '--help', 'Prints this help') do
         puts opts
         exit
